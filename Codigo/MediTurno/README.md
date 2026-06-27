@@ -106,7 +106,7 @@ Repositorio utilizado para el desarrollo del proyecto:
 
 **GitHub**
 
-<PRIVATE_URL>
+https://github.com/Aaronn04/MediTurno
 
 ---
 
