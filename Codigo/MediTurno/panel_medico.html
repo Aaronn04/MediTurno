@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediTurno | Panel Médico</title>
+
+    <link rel="stylesheet" href="Css/panel_medico.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!--====================================
+                SIDEBAR
+=====================================-->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <h2>MediTurno</h2>
+
+        </div>
+
+        <ul>
+
+            <li class="activo">
+
+                <i class="fa-solid fa-house-medical"></i>
+
+                Inicio
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                Agenda
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-user-group"></i>
+
+                Pacientes
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                Historias Clínicas
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-bell"></i>
+
+                Notificaciones
+
+            </li>
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Cerrar Sesión
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!--====================================
+            CONTENIDO
+=====================================-->
+
+    <main class="contenido">
+
+        <header class="topbar">
+
+            <h1>
+
+                Panel del Médico
+
+            </h1>
+
+            <div class="usuario">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                Dr. Juan Pérez
+
+            </div>
+
+        </header>
+
+        <!--====================================
+            ESTADÍSTICAS
+=====================================-->
+
+        <section class="estadisticas">
+
+            <div class="card">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <h2>
+
+                    8
+
+                </h2>
+
+                <p>
+
+                    Turnos para Hoy
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-group"></i>
+
+                <h2>
+
+                    126
+
+                </h2>
+
+                <p>
+
+                    Pacientes Atendidos
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2>
+
+                    09:00
+
+                </h2>
+
+                <p>
+
+                    Próximo Turno
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <h2>
+
+                    Cardiología
+
+                </h2>
+
+                <p>
+
+                    Especialidad
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!--====================================
+            AGENDA DEL DÍA
+=====================================-->
+
+        <section class="agenda">
+
+            <h2>
+
+                Agenda de Hoy
+
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+
+                            Hora
+
+                        </th>
+
+                        <th>
+
+                            Paciente
+
+                        </th>
+
+                        <th>
+
+                            Motivo
+
+                        </th>
+
+                        <th>
+
+                            Estado
+
+                        </th>
+
+                        <th>
+
+                            Acción
+
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+
+                            09:00
+
+                        </td>
+
+                        <td>
+
+                            Laura Martínez
+
+                        </td>
+
+                        <td>
+
+                            Control General
+
+                        </td>
+
+                        <td>
+
+                            <span class="confirmado">
+
+                                Confirmado
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+
+                                Atender
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            10:00
+
+                        </td>
+
+                        <td>
+
+                            Carlos Gómez
+
+                        </td>
+
+                        <td>
+
+                            Consulta
+
+                        </td>
+
+                        <td>
+
+                            <span class="pendiente">
+
+                                En Espera
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+
+                                Atender
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            11:00
+
+                        </td>
+
+                        <td>
+
+                            María Fernández
+
+                        </td>
+
+                        <td>
+
+                            Estudios Médicos
+
+                        </td>
+
+                        <td>
+
+                            <span class="confirmado">
+
+                                Confirmado
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+
+                                Atender
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            12:00
+
+                        </td>
+
+                        <td>
+
+                            Roberto Díaz
+
+                        </td>
+
+                        <td>
+
+                            Consulta de Seguimiento
+
+                        </td>
+
+                        <td>
+
+                            <span class="pendiente">
+
+                                En Espera
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+
+                                Atender
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!--====================================
+                ACCIONES RÁPIDAS
+    =====================================-->
+
+        <section class="acciones">
+
+            <h2>
+
+                Acciones Rápidas
+
+            </h2>
+
+            <div class="acciones-grid">
+
+                <button id="historiaClinica">
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                    Historia Clínica
+
+                </button>
+
+                <button id="receta">
+
+                    <i class="fa-solid fa-prescription"></i>
+
+                    Emitir Receta
+
+                </button>
+
+                <button id="certificado">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    Certificado Médico
+
+                </button>
+
+                <button id="agendaCompleta">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    Ver Agenda Completa
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!--====================================
+                AVISOS
+    =====================================-->
+
+        <section class="avisos">
+
+            <h2>
+
+                Avisos del Día
+
+            </h2>
+
+            <ul>
+
+                <li>
+
+                    📋 Revisar resultados de laboratorio de Laura Martínez.
+
+                </li>
+
+                <li>
+
+                    💊 Emitir receta para Carlos Gómez.
+
+                </li>
+
+                <li>
+
+                    📞 Confirmar turno de las 16:00 hs.
+
+                </li>
+
+                <li>
+
+                    🩺 Completar historias clínicas pendientes.
+
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <!--====================================
+                FOOTER
+=====================================-->
+
+    <footer>
+
+        <p>
+
+            © 2026 MediTurno | Panel Médico
+
+        </p>
+
+    </footer>
+
+    <script src="Js/panel_medico.js"></script>
+
+</body>
+
+</html>

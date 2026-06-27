@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediTurno | Panel Administrador</title>
+
+    <link rel="stylesheet" href="Css/panel_admin.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!--====================================
+                SIDEBAR
+=====================================-->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <h2>MediTurno</h2>
+
+        </div>
+
+        <ul>
+
+            <li class="activo">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Turnos
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                Médicos
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-users"></i>
+
+                Pacientes
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-gear"></i>
+
+                Configuración
+
+            </li>
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Salir
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!--====================================
+                CONTENIDO
+=====================================-->
+
+    <main class="contenido">
+
+        <header class="topbar">
+
+            <h1>
+
+                Panel de Administración
+
+            </h1>
+
+            <div class="usuario">
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                Administrador
+
+            </div>
+
+        </header>
+
+        <!--====================================
+            ESTADÍSTICAS
+=====================================-->
+
+        <section class="estadisticas">
+
+            <div class="card">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <h2>
+
+                    128
+
+                </h2>
+
+                <p>
+
+                    Turnos Totales
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <h2>
+
+                    15
+
+                </h2>
+
+                <p>
+
+                    Médicos
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2>
+
+                    254
+
+                </h2>
+
+                <p>
+
+                    Pacientes
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <h2>
+
+                    12
+
+                </h2>
+
+                <p>
+
+                    Especialidades
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!--====================================
+            TABLA
+=====================================-->
+
+        <section class="tabla">
+
+            <h2>
+
+                Próximos Turnos
+
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+
+                            Paciente
+
+                        </th>
+
+                        <th>
+
+                            Médico
+
+                        </th>
+
+                        <th>
+
+                            Especialidad
+
+                        </th>
+
+                        <th>
+
+                            Fecha
+
+                        </th>
+
+                        <th>
+
+                            Estado
+
+                        </th>
+
+                        <th>
+
+                            Acción
+
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+
+                            Juan Pérez
+
+                        </td>
+
+                        <td>
+
+                            Dra. Gómez
+
+                        </td>
+
+                        <td>
+
+                            Cardiología
+
+                        </td>
+
+                        <td>
+
+                            28/06/2026
+
+                        </td>
+
+                        <td>
+
+                            <span class="confirmado">
+
+                                Confirmado
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+
+                                Ver
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            Laura Martínez
+
+                        </td>
+
+                        <td>
+
+                            Dr. Fernández
+
+                        </td>
+
+                        <td>
+
+                            Traumatología
+
+                        </td>
+
+                        <td>
+
+                            30/06/2026
+
+                        </td>
+
+                        <td>
+
+                            <span class="pendiente">
+
+                                Pendiente
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+
+                                Ver
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            Martín López
+
+                        </td>
+
+                        <td>
+
+                            Dra. Torres
+
+                        </td>
+
+                        <td>
+
+                            Dermatología
+
+                        </td>
+
+                        <td>
+
+                            02/07/2026
+
+                        </td>
+
+                        <td>
+
+                            <span class="cancelado">
+
+                                Cancelado
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+
+                                Ver
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!--====================================
+                ACCIONES RÁPIDAS
+    =====================================-->
+
+        <section class="acciones-rapidas">
+
+            <h2>
+
+                Acciones Rápidas
+
+            </h2>
+
+            <div class="acciones-grid">
+
+                <button id="nuevoTurno">
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                    Nuevo Turno
+
+                </button>
+
+                <button id="nuevoPaciente">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Nuevo Paciente
+
+                </button>
+
+                <button id="nuevoMedico">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                    Nuevo Médico
+
+                </button>
+
+                <button id="reporte">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    Generar Reporte
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!--====================================
+                ACTIVIDAD RECIENTE
+    =====================================-->
+
+        <section class="actividad">
+
+            <h2>
+
+                Actividad Reciente
+
+            </h2>
+
+            <ul>
+
+                <li>
+
+                    ✅ Se registró un nuevo paciente.
+
+                </li>
+
+                <li>
+
+                    📅 Se confirmó un turno para Cardiología.
+
+                </li>
+
+                <li>
+
+                    👨‍⚕️ Se incorporó un nuevo médico al sistema.
+
+                </li>
+
+                <li>
+
+                    ❌ Un turno fue cancelado por el paciente.
+
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <!--====================================
+                FOOTER
+=====================================-->
+
+    <footer>
+
+        <p>
+
+            © 2026 MediTurno | Panel de Administración
+
+        </p>
+
+    </footer>
+
+    <script src="Js/panel_admin.js"></script>
+
+</body>
+
+</html>

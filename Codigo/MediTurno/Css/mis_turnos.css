@@ -1,0 +1,751 @@
+/*==========================
+=         VARIABLES
+==========================*/
+
+:root {
+
+    --color-primario: #0F4C81;
+    --color-secundario: #00A896;
+    --color-verde: #28A745;
+    --color-amarillo: #F4B400;
+    --color-rojo: #DC3545;
+    --color-fondo: #F4F8FB;
+    --color-blanco: #FFFFFF;
+    --color-texto: #263238;
+    --color-gris: #6B7280;
+
+}
+
+/*==========================
+=         RESET
+==========================*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--color-fondo);
+
+    color: var(--color-texto);
+
+}
+
+/*==========================
+=         HEADER
+==========================*/
+
+header {
+
+    background: var(--color-primario);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+}
+
+.navbar {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 18px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.logo i {
+
+    font-size: 34px;
+
+    color: #7CFFCB;
+
+}
+
+.logo h1 {
+
+    color: white;
+
+}
+
+.logo span {
+
+    color: #DCE6F2;
+
+    font-size: 13px;
+
+}
+
+.menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.menu a {
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.menu a:hover {
+
+    color: #7CFFCB;
+
+}
+
+.activo {
+
+    color: #7CFFCB !important;
+
+}
+
+/*==========================
+=          HERO
+==========================*/
+
+.hero {
+
+    background: linear-gradient(135deg, #0F4C81, #00A896);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+.hero h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+.hero p {
+
+    font-size: 18px;
+
+}
+
+/*==========================
+=         FILTROS
+==========================*/
+
+.filtros {
+
+    max-width: 1250px;
+
+    margin: 40px auto;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.filtros input,
+.filtros select {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border: 2px solid #D9E2EC;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    transition: .3s;
+
+}
+
+.filtros input:focus,
+.filtros select:focus {
+
+    border-color: var(--color-secundario);
+
+    box-shadow: 0 0 0 4px rgba(0, 168, 150, .15);
+
+}
+
+/*==========================
+=         TURNOS
+==========================*/
+
+.contenedor-turnos {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+    gap: 30px;
+
+}
+
+.turno {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.turno:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .15);
+
+}
+
+.cabecera {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.cabecera h3 {
+
+    color: var(--color-primario);
+
+}
+
+.turno p {
+
+    margin: 12px 0;
+
+    color: var(--color-gris);
+
+}
+
+.turno i {
+
+    color: var(--color-secundario);
+
+    margin-right: 8px;
+
+}
+
+/*==========================
+=         ESTADOS
+==========================*/
+
+.estado {
+
+    color: white;
+
+    padding: 6px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.verde {
+
+    background: var(--color-verde);
+
+}
+
+.amarillo {
+
+    background: var(--color-amarillo);
+
+}
+
+.rojo {
+
+    background: var(--color-rojo);
+
+}
+
+/*==========================
+=         BOTONES
+==========================*/
+
+.acciones {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+.btn-reprogramar,
+.btn-cancelar {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-reprogramar {
+
+    background: var(--color-secundario);
+
+}
+
+.btn-cancelar {
+
+    background: var(--color-rojo);
+
+}
+
+.btn-reprogramar:hover,
+.btn-cancelar:hover {
+
+    transform: translateY(-3px);
+
+}
+
+/*==================================================
+=            ESTADÍSTICAS
+==================================================*/
+
+.estadisticas {
+
+    max-width: 1250px;
+
+    margin: 70px auto;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+}
+
+.card-estadistica {
+
+    background: var(--color-blanco);
+
+    border-radius: 20px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.card-estadistica:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .15);
+
+}
+
+.card-estadistica i {
+
+    font-size: 50px;
+
+    color: var(--color-secundario);
+
+    margin-bottom: 18px;
+
+}
+
+.card-estadistica h3 {
+
+    color: var(--color-primario);
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+.card-estadistica p {
+
+    color: var(--color-gris);
+
+    font-size: 15px;
+
+}
+
+/*==================================================
+=            FOOTER
+==================================================*/
+
+footer {
+
+    background: var(--color-primario);
+
+    color: white;
+
+    margin-top: 80px;
+
+}
+
+.footer-contenido {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+}
+
+.footer-contenido p {
+
+    margin: 8px 0;
+
+}
+
+/*==================================================
+=            RESPONSIVE TABLET
+==================================================*/
+
+@media(max-width:992px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .filtros {
+
+        flex-direction: column;
+
+    }
+
+    .hero h2 {
+
+        font-size: 36px;
+
+    }
+
+}
+
+/*==================================================
+=            RESPONSIVE CELULAR
+==================================================*/
+
+@media(max-width:768px) {
+
+    .navbar {
+
+        padding: 20px;
+
+    }
+
+    .logo {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .logo span {
+
+        display: none;
+
+    }
+
+    .menu {
+
+        gap: 15px;
+
+    }
+
+    .hero {
+
+        padding: 60px 20px;
+
+    }
+
+    .hero h2 {
+
+        font-size: 30px;
+
+    }
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+    .filtros {
+
+        padding: 0 20px;
+
+    }
+
+    .contenedor-turnos {
+
+        padding: 0 20px;
+
+    }
+
+    .turno {
+
+        padding: 25px;
+
+    }
+
+    .acciones {
+
+        flex-direction: column;
+
+    }
+
+    .estadisticas {
+
+        padding: 0 20px;
+
+    }
+
+}
+
+/*==================================================
+=            MÓVILES PEQUEÑOS
+==================================================*/
+
+@media(max-width:480px) {
+
+    .hero h2 {
+
+        font-size: 26px;
+
+    }
+
+    .cabecera {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+    .estado {
+
+        align-self: flex-start;
+
+    }
+
+    .card-estadistica {
+
+        padding: 25px 20px;
+
+    }
+
+    .card-estadistica h3 {
+
+        font-size: 28px;
+
+    }
+
+}
+
+/*==================================================
+=            SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #E8EEF5;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--color-secundario);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--color-primario);
+
+}
+
+/*==================================================
+=            SELECCIÓN
+==================================================*/
+
+::selection {
+
+    background: var(--color-secundario);
+
+    color: white;
+
+}
+
+/*==================================================
+=            ANIMACIONES
+==================================================*/
+
+.turno,
+.card-estadistica {
+
+    animation: aparecer .8s ease;
+
+}
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/*==================================================
+=            EFECTOS EXTRA
+==================================================*/
+
+.turno.confirmado {
+
+    border-left: 6px solid var(--color-verde);
+
+}
+
+.turno.pendiente {
+
+    border-left: 6px solid var(--color-amarillo);
+
+}
+
+.turno.cancelado {
+
+    border-left: 6px solid var(--color-rojo);
+
+}
+
+.btn-reprogramar:active,
+.btn-cancelar:active {
+
+    transform: scale(.98);
+
+}
+
+input::placeholder {
+
+    color: #9AA5B1;
+
+}

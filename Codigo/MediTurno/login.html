@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediTurno | Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="Css/login.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!--=========================
+            NAVBAR
+    ==========================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <div>
+
+                    <h1>MediTurno</h1>
+                    <span>Sistema de Gestión de Turnos Médicos</span>
+
+                </div>
+
+            </div>
+
+            <ul class="menu">
+
+                <li><a href="index.html">Inicio</a></li>
+                <li><a class="activo" href="login.html">Login</a></li>
+                <li><a href="solicitar_turno.html">Solicitar Turno</a></li>
+                <li><a href="mis_turnos.html">Mis Turnos</a></li>
+                <li><a href="panel_admin.html">Administrador</a></li>
+                <li><a href="panel_medico.html">Panel Médico</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!--=========================
+            LOGIN
+    ==========================-->
+
+    <main class="contenedor-login">
+
+        <section class="login-card">
+
+            <div class="lado-izquierdo">
+
+                <div class="icono">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                </div>
+
+                <h2>Bienvenido</h2>
+
+                <p>
+
+                    Ingrese sus credenciales para acceder al sistema MediTurno.
+
+                </p>
+
+            </div>
+
+            <div class="lado-derecho">
+
+                <h2>Iniciar Sesión</h2>
+
+                <p class="descripcion">
+
+                    Complete los siguientes datos.
+
+                </p>
+
+                <form id="formLogin">
+
+                    <div class="grupo">
+
+                        <label>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            Correo electrónico
+
+                        </label>
+
+                        <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            Contraseña
+
+                        </label>
+
+                        <input type="password" id="password" placeholder="********" required>
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>
+
+                            <i class="fa-solid fa-user-group"></i>
+
+                            Rol
+
+                        </label>
+
+                        <select id="rol">
+
+                            <option value="">Seleccione un rol</option>
+
+                            <option value="paciente">
+                                Paciente
+                            </option>
+
+                            <option value="medico">
+                                Médico
+                            </option>
+
+                            <option value="admin">
+                                Administrador
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button type="submit" class="btn-login">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Ingresar
+
+                    </button>
+
+                </form>
+
+                <div class="extras">
+
+                    <a href="#">¿Olvidó su contraseña?</a>
+
+                    <a href="#">Crear una cuenta</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--=========================
+            FOOTER
+    ==========================-->
+
+    <footer>
+
+        <p>
+
+            © 2026 MediTurno | Sistema de Gestión de Turnos Médicos
+
+        </p>
+
+    </footer>
+
+    <script src="Js/login.js"></script>
+
+</body>
+
+</html>

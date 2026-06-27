@@ -1,0 +1,695 @@
+/*==========================
+=         VARIABLES
+==========================*/
+
+:root {
+
+    --color-primario: #0F4C81;
+    --color-secundario: #00A896;
+    --color-fondo: #F4F8FB;
+    --color-blanco: #FFFFFF;
+    --color-texto: #263238;
+    --color-gris: #6B7280;
+
+    --verde: #28A745;
+    --amarillo: #F4B400;
+    --rojo: #DC3545;
+
+}
+
+/*==========================
+=         RESET
+==========================*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--color-fondo);
+
+    display: flex;
+
+    min-height: 100vh;
+
+    color: var(--color-texto);
+
+}
+
+/*==========================
+=         SIDEBAR
+==========================*/
+
+.sidebar {
+
+    width: 260px;
+
+    background: var(--color-primario);
+
+    color: white;
+
+    padding: 30px 20px;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    bottom: 0;
+
+}
+
+.sidebar .logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+
+}
+
+.sidebar .logo i {
+
+    font-size: 36px;
+
+    color: #7CFFCB;
+
+}
+
+.sidebar ul {
+
+    list-style: none;
+
+}
+
+.sidebar li {
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.sidebar li:hover {
+
+    background: rgba(255, 255, 255, .12);
+
+}
+
+.sidebar li i {
+
+    margin-right: 12px;
+
+}
+
+.sidebar li a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+.sidebar .activo {
+
+    background: rgba(255, 255, 255, .18);
+
+}
+
+/*==========================
+=         CONTENIDO
+==========================*/
+
+.contenido {
+
+    margin-left: 260px;
+
+    width: 100%;
+
+    padding: 35px;
+
+}
+
+/*==========================
+=         TOPBAR
+==========================*/
+
+.topbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+.topbar h1 {
+
+    color: var(--color-primario);
+
+}
+
+.usuario {
+
+    background: white;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+    font-weight: 600;
+
+}
+
+.usuario i {
+
+    margin-right: 10px;
+
+    color: var(--color-secundario);
+
+}
+
+/*==========================
+=        ESTADÍSTICAS
+==========================*/
+
+.estadisticas {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+
+}
+
+.card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .15);
+
+}
+
+.card i {
+
+    font-size: 48px;
+
+    color: var(--color-secundario);
+
+    margin-bottom: 18px;
+
+}
+
+.card h2 {
+
+    color: var(--color-primario);
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+.card p {
+
+    color: var(--color-gris);
+
+}
+
+/*==========================
+=         TABLA
+==========================*/
+
+.tabla {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+.tabla h2 {
+
+    margin-bottom: 20px;
+
+    color: var(--color-primario);
+
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+th {
+
+    background: var(--color-primario);
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+
+}
+
+td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #E5E7EB;
+
+}
+
+tbody tr:hover {
+
+    background: #F8FBFD;
+
+}
+
+button {
+
+    border: none;
+
+    background: var(--color-secundario);
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+/*==================================================
+=            ESTADOS
+==================================================*/
+
+.confirmado {
+
+    background: #E8F8F0;
+
+    color: var(--verde);
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+}
+
+.pendiente {
+
+    background: #FFF8E1;
+
+    color: var(--amarillo);
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+}
+
+.cancelado {
+
+    background: #FDECEC;
+
+    color: var(--rojo);
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+}
+
+/*==================================================
+=         ACCIONES RÁPIDAS
+==================================================*/
+
+.acciones-rapidas {
+
+    margin-top: 40px;
+
+    background: var(--color-blanco);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+.acciones-rapidas h2 {
+
+    color: var(--color-primario);
+
+    margin-bottom: 25px;
+
+}
+
+.acciones-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+}
+
+.acciones-grid button {
+
+    padding: 18px;
+
+    font-size: 16px;
+
+    border-radius: 12px;
+
+}
+
+.acciones-grid button i {
+
+    margin-right: 10px;
+
+}
+
+/*==================================================
+=         ACTIVIDAD RECIENTE
+==================================================*/
+
+.actividad {
+
+    margin-top: 40px;
+
+    background: var(--color-blanco);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+.actividad h2 {
+
+    color: var(--color-primario);
+
+    margin-bottom: 20px;
+
+}
+
+.actividad ul {
+
+    list-style: none;
+
+}
+
+.actividad li {
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #E5E7EB;
+
+    color: var(--color-gris);
+
+}
+
+.actividad li:last-child {
+
+    border-bottom: none;
+
+}
+
+/*==================================================
+=            FOOTER
+==================================================*/
+
+footer {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 260px;
+
+    right: 0;
+
+    background: var(--color-primario);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+}
+
+/*==================================================
+=            RESPONSIVE TABLET
+==================================================*/
+
+@media(max-width:992px) {
+
+    body {
+
+        display: block;
+
+    }
+
+    .sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+    .contenido {
+
+        margin-left: 0;
+
+        padding: 25px;
+
+    }
+
+    footer {
+
+        position: static;
+
+    }
+
+    table {
+
+        display: block;
+
+        overflow-x: auto;
+
+    }
+
+}
+
+/*==================================================
+=            RESPONSIVE CELULAR
+==================================================*/
+
+@media(max-width:768px) {
+
+    .topbar {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+    .card {
+
+        padding: 25px;
+
+    }
+
+    .tabla {
+
+        padding: 20px;
+
+    }
+
+    .acciones-rapidas {
+
+        padding: 20px;
+
+    }
+
+    .actividad {
+
+        padding: 20px;
+
+    }
+
+}
+
+/*==================================================
+=            SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #E8EEF5;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--color-secundario);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--color-primario);
+
+}
+
+/*==================================================
+=            SELECCIÓN
+==================================================*/
+
+::selection {
+
+    background: var(--color-secundario);
+
+    color: white;
+
+}
+
+/*==================================================
+=            ANIMACIONES
+==================================================*/
+
+.card,
+.tabla,
+.acciones-rapidas,
+.actividad {
+
+    animation: aparecer .8s ease;
+
+}
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/*==================================================
+=            EFECTOS EXTRA
+==================================================*/
+
+button:active {
+
+    transform: scale(.98);
+
+}
+
+.sidebar li {
+
+    user-select: none;
+
+}
+
+.sidebar li:hover {
+
+    padding-left: 20px;
+
+}

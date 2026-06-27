@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediTurno | Solicitar Turno</title>
+
+    <link rel="stylesheet" href="Css/solicitar_turno.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!--====================================
+                HEADER
+=====================================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <div>
+
+                    <h1>MediTurno</h1>
+
+                    <span>Sistema de Gestión de Turnos Médicos</span>
+
+                </div>
+
+            </div>
+
+            <ul class="menu">
+
+                <li><a href="index.html">Inicio</a></li>
+
+                <li><a href="login.html">Login</a></li>
+
+                <li><a class="activo" href="solicitar_turno.html">
+
+                        Solicitar Turno
+
+                    </a></li>
+
+                <li><a href="mis_turnos.html">
+
+                        Mis Turnos
+
+                    </a></li>
+
+                <li><a href="panel_admin.html">
+
+                        Administrador
+
+                    </a></li>
+
+                <li><a href="panel_medico.html">
+
+                        Panel Médico
+
+                    </a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!--====================================
+                HERO
+=====================================-->
+
+    <section class="hero">
+
+        <div class="hero-contenido">
+
+            <h2>
+
+                Solicitar un Turno Médico
+
+            </h2>
+
+            <p>
+
+                Complete el formulario para reservar una consulta
+                con el profesional de su preferencia.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!--====================================
+            CONTENIDO
+=====================================-->
+
+    <main class="contenedor">
+
+        <section class="formulario">
+
+            <h2>
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+                Nuevo Turno
+
+            </h2>
+
+            <form id="formTurno">
+
+                <!-- Especialidad -->
+
+                <div class="campo">
+
+                    <label>
+
+                        Especialidad
+
+                    </label>
+
+                    <select id="especialidad">
+
+                        <option value="">
+
+                            Seleccione...
+
+                        </option>
+
+                        <option>
+
+                            Cardiología
+
+                        </option>
+
+                        <option>
+
+                            Clínica Médica
+
+                        </option>
+
+                        <option>
+
+                            Pediatría
+
+                        </option>
+
+                        <option>
+
+                            Traumatología
+
+                        </option>
+
+                        <option>
+
+                            Dermatología
+
+                        </option>
+
+                        <option>
+
+                            Neurología
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Médico -->
+
+                <div class="campo">
+
+                    <label>
+
+                        Médico
+
+                    </label>
+
+                    <select id="medico">
+
+                        <option value="">
+
+                            Seleccione...
+
+                        </option>
+
+                        <option>
+
+                            Dr. Juan Pérez
+
+                        </option>
+
+                        <option>
+
+                            Dra. María Gómez
+
+                        </option>
+
+                        <option>
+
+                            Dr. Carlos Fernández
+
+                        </option>
+
+                        <option>
+
+                            Dra. Lucía Torres
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Fecha -->
+
+                <div class="campo">
+
+                    <label>
+
+                        Fecha
+
+                    </label>
+
+                    <input type="date" id="fecha">
+
+                </div>
+
+                <!-- Hora -->
+
+                <div class="campo">
+
+                    <label>
+
+                        Horario
+
+                    </label>
+
+                    <select id="hora">
+
+                        <option>
+
+                            09:00
+
+                        </option>
+
+                        <option>
+
+                            09:30
+
+                        </option>
+
+                        <option>
+
+                            10:00
+
+                        </option>
+
+                        <option>
+
+                            10:30
+
+                        </option>
+
+                        <option>
+
+                            11:00
+
+                        </option>
+
+                        <option>
+
+                            11:30
+
+                        </option>
+
+                        <option>
+
+                            16:00
+
+                        </option>
+
+                        <option>
+
+                            16:30
+
+                        </option>
+
+                        <option>
+
+                            17:00
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Observaciones -->
+
+                <div class="campo">
+
+                    <label>
+
+                        Observaciones
+
+                    </label>
+
+                    <textarea id="observaciones" rows="5"
+                        placeholder="Ingrese alguna observación para el profesional (opcional)..."></textarea>
+
+                </div>
+
+                <!-- Botón -->
+
+                <button type="submit" class="btn-confirmar">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Confirmar Turno
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!--====================================
+                RESUMEN DEL TURNO
+        =====================================-->
+
+        <aside class="resumen">
+
+            <h2>
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                Resumen
+
+            </h2>
+
+            <div class="dato">
+
+                <span>Especialidad</span>
+
+                <strong id="rEspecialidad">
+
+                    -
+
+                </strong>
+
+            </div>
+
+            <div class="dato">
+
+                <span>Médico</span>
+
+                <strong id="rMedico">
+
+                    -
+
+                </strong>
+
+            </div>
+
+            <div class="dato">
+
+                <span>Fecha</span>
+
+                <strong id="rFecha">
+
+                    -
+
+                </strong>
+
+            </div>
+
+            <div class="dato">
+
+                <span>Horario</span>
+
+                <strong id="rHora">
+
+                    -
+
+                </strong>
+
+            </div>
+
+            <div class="dato">
+
+                <span>Estado</span>
+
+                <strong class="estado">
+
+                    Pendiente
+
+                </strong>
+
+            </div>
+
+            <div id="mensajeTurno" class="mensaje">
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!--====================================
+                INFORMACIÓN
+    =====================================-->
+
+    <section class="informacion">
+
+        <div class="info-card">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <h3>
+
+                Profesionales
+
+            </h3>
+
+            <p>
+
+                Contamos con médicos especializados en distintas áreas para brindar una atención de calidad.
+
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>
+
+                Horarios
+
+            </h3>
+
+            <p>
+
+                Atención de lunes a viernes de 08:00 a 18:00 horas.
+
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            <h3>
+
+                Atención Segura
+
+            </h3>
+
+            <p>
+
+                Todos los datos de los pacientes son tratados de forma confidencial.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!--====================================
+                FOOTER
+    =====================================-->
+
+    <footer>
+
+        <div class="footer-contenido">
+
+            <p>
+
+                © 2026 MediTurno | Sistema de Gestión de Turnos Médicos
+
+            </p>
+
+            <p>
+
+                Desarrollado para la materia Práctica Profesionalizante II.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="Js/solicitar_turno.js"></script>
+
+</body>
+
+</html>
