@@ -1,127 +1,32 @@
-# 🏥 MediTurno
+# MediTurno | Sistema de Gestión de Turnos Médicos
 
-## Sistema de Gestión de Turnos Médicos
-
-### Práctica Profesionalizante II
-
-**Carrera:** Tecnicatura Superior en Desarrollo de Software
-
-**Año:** 2026
+Este repositorio contiene el desarrollo integral de **MediTurno**, una plataforma optimizada para la gestión digital de turnos médicos en instituciones de salud, cubriendo desde el análisis inicial de requerimientos hasta el despliegue final en producción.
 
 ---
 
-## Descripción
+## 🚀 Arquitectura y Tecnologías Utilizadas
+El ecosistema completo se encuentra desplegado de forma real y operativa en un servidor virtual de **IBM LinuxONE Cloud**, integrando la totalidad de los recursos obligatorios de la cátedra:
 
-MediTurno es una maqueta funcional desarrollada como proyecto integrador para la materia **Práctica Profesionalizante II**.
-
-El objetivo del proyecto fue transformar la interfaz realizada previamente en Google Sites en una aplicación desarrollada utilizando tecnologías web de bajo nivel: **HTML5**, **CSS3** y **JavaScript**.
-
-El sistema simula la gestión de turnos médicos mediante una interfaz moderna, intuitiva y organizada.
-
----
-
-# Tecnologías utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Google Fonts
-- Font Awesome
+- **Backend y Servidor Web:** Django y Gunicorn (configurado en el puerto HTTP estándar 80).
+- **Base de Datos:** SQLite nativo integrado al ORM.
+- **Dominio y Red Segura:** Redirección dinámica mediante Duck DNS.
+- **Asistente Virtual:** Python-Telegram-Bot (operativo 24/7 en producción mediante el proceso de fondo `nohup`).
 
 ---
 
-# Estructura del proyecto
+## 🤖 Funcionamiento del Proyecto Bot
+El bot de Telegram está amoldado estrictamente a la **lógica de negocio** de MediTurno utilizando procesamiento de lenguaje natural por coincidencia de palabras clave. Responde simulando de manera inteligente los flujos de los tres actores principales del sistema definidos en las etapas de diseño:
 
-```text
-MediTurno/
-|
-│── index.html
-│── login.html
-│── solicitar_turno.html
-│── mis_turnos.html
-│── panel_admin.html
-│── panel_medico.html
-│
-├── Css/
-│     index.css
-│     login.css
-│     solicitar_turno.css
-│     mis_turnos.css
-│     panel_admin.css
-│     panel_medico.css
-│
-├── Js/
-│     index.js
-│     login.js
-│     solicitar_turno.js
-│     mis_turnos.js
-│     panel_admin.js
-│     panel_medico.js
-│
-└── README.md
-```
+1. **Pacientes:** Orientación inmediata para solicitar, consultar o cancelar turnos médicos en las distintas especialidades (Cardiología, Pediatría, Traumatología, Clínica Médica).
+2. **Médicos:** Acceso simulado para la consulta de agendas y horarios de atención en tiempo real.
+3. **Administradores:** Herramientas de control para la gestión de profesionales, modificación de horarios y supervisión general.
 
 ---
 
-# Funcionalidades
-
-- Página principal del sistema.
-- Inicio de sesión.
-- Solicitud de turnos médicos.
-- Consulta de turnos.
-- Panel de administración.
-- Panel del médico.
-- Navegación entre páginas.
-- Validación básica de formularios.
-- Interacciones mediante JavaScript.
-- Diseño adaptable (Responsive).
+## 📁 Estructura del Repositorio
+- `Documentacion/`: Contiene los entregables de las etapas I a V (Plan de trabajo, Requerimientos funcionales, Diagramas UML de Casos de Uso, Clases y Modelo de Base de Datos).
+- `Codigo/MediTurno/`: Contiene los archivos de control y lógica del asistente virtual (`main.py` y `responses.py`).
+- `backend/`: Configuración estructural del servidor e inicialización del entorno web de Django.
 
 ---
-
-# Objetivo del proyecto
-
-Desarrollar una maqueta funcional de un sistema de gestión de turnos médicos aplicando los conocimientos adquiridos durante la cursada de Práctica Profesionalizante II.
-
----
-
-# Proyecto Integrador
-
-Este proyecto fue desarrollado siguiendo las distintas etapas solicitadas durante la materia:
-
-- Proyecto Parte I
-- Proyecto Parte II
-- Proyecto Parte III
-- Proyecto Parte IV
-- Proyecto Parte V
-- Proyecto Parte VI
-- Proyecto Parte VII
-- Parcial N.º 1
-- Parcial N.º 2
-
----
-
-# Repositorio
-
-Repositorio utilizado para el desarrollo del proyecto:
-
-**GitHub**
-
-https://github.com/Aaronn04/MediTurno
-
----
-
-# Autor
-
-**Nombre y Apellido:** Aaron Gordillo
-
-**Carrera:** Tecnicatura Superior en Desarrollo de Software
-
-**Materia:** Práctica Profesionalizante II
-
-**Año:** 2026
-
----
-
-# Observaciones
-
-Este proyecto tiene fines exclusivamente académicos y fue desarrollado como parte de las actividades prácticas de la materia Práctica Profesionalizante II.
+*Desarrollado por Aaron Gordillo para la materia Práctica Profesionalizante II (2026).*
